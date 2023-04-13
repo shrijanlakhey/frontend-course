@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box sizing</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* box-sizing allows us to include the padding and border in an element's total width and height.*/
+        /* If you set box-sizing: border-box; on an element, padding and border are included in the width and height */
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        border: 10px solid red;
+        padding-top: 20px;
+        padding-left: 50px;
+        padding-right: 30px;
+        padding-bottom: 10px;
+        /* box-sizing halena bbhane  padding rah border halda dix ko box bahira thapinxa */
+        /* box-sizing halyo bhane box ko same height and wdth i.2 200px each bhitra nai bashca ani content le aafno size border, padding anusar adjust garxa */
+      }
+    </style>
+
+    <!-- ctrl + shift + i (in browser)
+    computed mah jane ani tya k k info dekhauxa -->
+  </head>
+  <body>
+    <div class="box1">content</div>
+  </body>
+</html>

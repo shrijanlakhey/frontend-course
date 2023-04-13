@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <!-- Image recommended size 1920 x 1080 
+    otherwise the image will stretch -->
+    <style>
+      /* overriding default margin and padding */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* new file banaunda garnai parxa mathi ko part */
+
+      body {
+        background-image: url("https://wallpaperaccess.com/full/1992011.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* vh = view height */
+        /* mathi ko jati matra garyo bhane photo scroll down garna milne hunxa jun ramro dekhen */
+
+        background-attachment: fixed; /* background fixed garidiyo */
+        overflow: hidden; /* scrollbar hataidiyo */
+
+        /* form lai center mah lyauna  lai */
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      form {
+        width: 60%; /* screen ko 60% width linxa */
+        /* height: 70vh; */
+        /* border: 1px solid red; */
+        border-radius: 10px;
+        background: rgba(
+          126,
+          67,
+          67,
+          0.4
+        ); /*backdrop ko blur sanga aru kunai color combine garnu paryo bhane yo use garne*/
+        opacity: 70%;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        backdrop-filter: blur(100px); /*background blur banaidinxa */
+
+        /* text-align: center; */
+      }
+
+      /*input{
+        width: 100%;  parent ko width kati xah tyeti nai linxa 
+      }*/
+
+      .input_container input {
+        /* input container class ko input lai effect garxa */
+        width: 100%;
+      }
+
+      .input_container {
+        position: relative;
+      }
+
+      .input_container i {
+        position: absolute;
+        top: 0.6rem;
+        left: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .name_container input {
+        width: 100%;
+      }
+
+      .name_container input,
+      .input_container input {
+        padding: 0.8rem;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 5px;
+        outline: none; /* tyo field select garda kheri aaune outline hatauxa */
+
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+      }
+
+      input::placeholder {
+        color: white;
+      }
+
+      .name_container {
+        display: flex;
+        column-gap: 10px;
+      }
+      #text_container {
+        text-align: center;
+        color: white;
+        margin: 10px;
+      }
+      .agree {
+        color: white;
+        margin: 10px;
+      }
+
+      #submitBtn {
+        margin-top: 0.4rem;
+        width: 150px;
+        height: 40px;
+        border: 1px solid white;
+        background: transparent;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+      }
+
+      /* kun px dekhi bigrinxa tei value halen ho tala */
+      @media (max-width: 400px) {
+        form {
+          width: 80%;
+        }
+
+        .agree label {
+          font-size: 0.8rem;
+        }
+      }
+      /* use media query to make site responsive */
+
+      /* 
+      mobile mah herna ko lagi
+      -both devices must be connected in same wifi
+      -run ipconfig command in cmd
+      -ipv4 address mobile ko browser mah halne
+      -ip address paxi :port halne
+      -/ paxi file ko name halne with its etxension */
+      /* -eg: http://192.168.50.221:5500/registration.html */
+    </style>
+    <!-- hyuga hinata -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <form action="#">
+      <div id="text_container">
+        <h2>Register</h2>
+        <p>Fill out the form</p>
+      </div>
+
+      <div class="name_container">
+        <input type="text" id="fname" placeholder="First Name" />
+        <input type="text" id="lname" placeholder="Last Name" />
+      </div>
+
+      <div class="input_container">
+        <i class="fa-solid fa-user" style="color: #ffffff"></i>
+        <input type="text" id="username" placeholder="Username" />
+        <!-- <input type="text" id="username" class="fa" placeholder="&#xf007; Username" /> placeholder mah halna ko lagi tara yesle font ni change gardinxa -->
+      </div>
+
+      <div class="input_container">
+        <i class="fa-solid fa-envelope" style="color: #ffffff"></i>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="E-mail Address"
+        />
+      </div>
+
+      <div class="input_container">
+        <i class="fa-solid fa-lock" style="color: #ffffff"></i>
+        <input type="password" id="password" placeholder="Password" />
+      </div>
+
+      <div class="agree">
+        <input type="checkbox" name="agree" id="agree" />
+        <label for="agree"
+          >I agree with the
+          <b>Terms and Conditions</b>
+          and the
+          <b>Privacy Policy</b>
+        </label>
+        <!--for mah class halne-->
+      </div>
+
+      <input type="submit" value="Create Account" id="submitBtn" />
+    </form>
+  </body>
+</html>

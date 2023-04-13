@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <style>
+      /*id selector */
+      button {
+        width: 200px;
+        height: 40px;
+        border: none;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer; /* point garirako hat wala cursor render garxa */
+        transition: all 0.2s ease-in; /* 0.2 seconds lagayera style haru lagauxa  */
+        /* ease-in : bistarai suru hunxa*/
+        margin: 1rem;
+      }
+
+      /* #btnOne {
+        width: 200px;
+        height: 40px;
+        border: none;
+        font-size: 20px;
+        background-color: blueviolet;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer; /* point garirako hat wala cursor render garxa */
+      /*transition: all 0.2s ease-in;  0.2 seconds lagayera style haru lagauxa  */
+      /* ease-in : bistarai suru hunxa*/
+      /* } */
+
+      #btnOne {
+        color: white;
+        background-color: blueviolet;
+      }
+
+      #btnOne:hover {
+        background-color: rgb(80, 21, 136);
+      }
+
+      #btnTwo {
+        background-color: chocolate;
+      }
+
+      #btnTwo:hover {
+        transform: scale(1.2); /* size change garxa */
+        background-color: rgb(168, 86, 27);
+      }
+
+      #btnThree {
+        color: white;
+        background-color: violet;
+        transition: all 0.3s ease;
+        border: 2px solid violet;
+      }
+
+      #btnThree:hover {
+        color: black;
+        background-color: white;
+        transition: all 0.3s ease;
+      }
+
+      #boxOne {
+        width: 300px;
+        height: 150px;
+        background-color: brown;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+      }
+
+      #boxOne {
+        /* transform: scale(0.7);  size badaune or ghatauna use garinxa */
+        /* transform: rotate(20deg);  bracket mah kati degree rotate garni halne */
+        /* transform: rotateX(180deg); rotate on x-axis */
+      }
+
+      #boxOne:hover {
+        transition: all 1s ease-in-out;
+
+        /* rptate an element */
+        /* transform: rotateX(360deg); */
+
+        /* transform: translate(100px, 300px); (x,y) */
+
+        /* transform: translateY(300px); */
+        /* transform: skew(100deg); */
+        transform: rotate(60deg) translate(200px, 300px) scale(1.1); /* mathi ko sabai styling lai combine garnu paryo bhane yesari eutai line mah lekne*/
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <button id="btnOne">Button one</button>
+      <button id="btnTwo">Button two</button>
+      <button id="btnThree">Button three</button>
+    </center>
+
+    <center>
+      <div id="boxOne">Box</div>
+    </center>
+  </body>
+</html>

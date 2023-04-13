@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      div {
+        margin: 1rem;
+        font-size: 2rem;
+      }
+      .parent {
+        display: flex; /*sabai element lai eutai line mah kochauna khojxa */
+        /* justify-content: space-around; */
+        align-items: center;
+        flex-wrap: wrap; /*sabai element lai eutai line mah kochaunu bhanda ni purai page mah phailaidinxa. in other words, overcomes the same line mah sab kochaune problem of flex*/
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        text-align: center;
+        /* display: inline; aafno context anusar matra size linxa specified wifht rah height lai ignore garxa not recommended to use) */
+        /* display: inline-block; overcomes inline ko kamzori*/
+        overflow: hidden; /*jun div bata overflow bhai rko ho tyo div amh yo rakhyo bhnane tyo bhitra ko element lai lukauxa */
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        text-align: center;
+        /* display: inline-block; */
+        /* display: flex; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt delectus
+        assumenda nobis ab voluptatum cupiditate facilis aspernatur ad earum
+        reiciendis iure natus, provident doloremque voluptatibus excepturi iste
+        in expedita sit?
+      </div>
+      <div class="box2">Text</div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>

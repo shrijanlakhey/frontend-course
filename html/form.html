@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- input mah requied diyo bhane tyesma input nahali kana form submit garna mildaina -->
+    <form action="#">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" required />
+      <br />
+      <br />
+
+      <!-- label mah for le chai tyesma click garyo bhane kun unput ko lagi ho bhanera dekhauxa -->
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" />
+      <br />
+      <br />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+      <br />
+      <br />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+      <br />
+      <br />
+
+      <input type="radio" name="gender" id="ml" value="male" />
+      <label for="ml">Male</label>
+
+      <input type="radio" name="gender" id="fl" value="female" />
+      <label for="fl">Female</label>
+      <br />
+      <br />
+
+      <label for="prefs">Select your preferences</label>
+      <!-- multiple halyo ki shift thichera multiple option select garna milxa -->
+      <!-- <select name="preferences" id="prefs" multiple> -->
+      <select name="preferences" id="prefs">
+        <option value="null" selected hidden disabled>Select an option</option>
+        <option value="java">Java</option>
+        <option value="py">Python</option>
+        <option value="Cp">C++</option>
+      </select>
+      <br />
+      <br />
+
+      <input type="checkbox" name="cars" id="ford" />
+      <label for="ford">Ford</label>
+      <input type="checkbox" name="cars" id="tesla" />
+      <label for="ford">Tesla</label>
+      <input type="checkbox" name="cars" id="ferrari" />
+      <label for="ford">Ferrari</label>
+
+      <br />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

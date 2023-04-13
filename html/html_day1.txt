@@ -1,0 +1,20 @@
+html
+
+required extensions
+-live server
+-HTML CSS support
+-prettier
+	settings mah
+		- search for save
+		- tick editor:format on save
+
+		-search for default 
+		-editor:default formatter mah prettier halne
+
+chirag123-bit
+
+
+
+http://127.0.0.1:5500/ halyo bhane
+index.html khulxa
+default nai index.html file ho
