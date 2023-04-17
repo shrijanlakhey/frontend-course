@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing game</title>
+</head>
+<body>
+    <script>
+        let tries = 3;
+        let guess = ""
+        let number = Math.floor(Math.random()*11)
+        console.log(number)
+        while(tries != 0){
+            guess = parseInt(prompt("Guess any number between 0 and 10\nYou have 3 tries to guess the correct number"));
+            if(guess == number){
+                alert("Correct guess!!");   
+                tries = 0;
+            }else{
+                alert(`Wrong Guess!!\nTries left: ${tries-1}`);
+                tries--
+                if (tries == 0){
+                    alert("Game over")
+                }
+            }
+
+        
+        }
+        
+        
+    </script>
+</body>
+</html>
