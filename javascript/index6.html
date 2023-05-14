@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <div>
+            <input type="text" name="name" id="name" placeholder="Name"><br><br>
+            <p id="nameError"></p>
+        </div>
+
+        <div>
+            <input type="email" name="email" id="email" placeholder="Email"><br><br>
+            <p id="emailError"></p>
+        </div>
+        
+        <div>
+            <input type="password" name="password" id="password" placeholder="Password"><br><br>
+            <p id="passwordError"></p>
+        </div>
+
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+
+        const form = document.getElementById("form");
+
+        // capturing error dekhaune wala paragraph
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const passwordError = document.getElementById("passwordError");
+
+        const emailPattern = "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/";  // regular expression
+
+        const passwordPattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/";
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault(); // html ko default validation lai hatako
+
+            if(name.value==""){
+                nameError.innerText = "Name cannot be empty";
+            }else if(name.value.length<=6){
+                nameError.innerText = "The Name must be greater than 6 characters";
+            }
+
+            if(!email.value.match(emailPattern)){
+                emailError.innerText = "The Email Pattern is Invalid";
+            }
+
+            if(!password.value.match(passwordPattern)){
+                passwordError.innerText = "The Password Pattern is Invalid";
+            }
+        })
+
+    </script>
+</body>
+</html>
