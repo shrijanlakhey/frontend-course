@@ -1,29 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./todo.css"
+import AddComponent from '../components/todoComponents/addComponent'
+import TodoItem from '../components/todoComponents/todoItem'
+import { v4 } from "uuid"
 
 const Todo = () => {
+    const[todos, setTodos] = useState([
+        {
+            "id": v4(),
+            "task": "Go to the market",
+            "status": "pending",
+        },
+        
+        {
+            "id": v4(),
+            "task": "Go to the college",
+            "status": "pending",
+        },
+
+        {
+            "id": v4(),
+            "task": "Complete Assignment",
+            "status": "pending",
+        },
+
+        {
+            "id": v4(),
+            "task": "Read Manga",
+            "status": "pending",
+        },
+    ])
     return(
         <div id="todoContainer">
             <div id="todoBox">
                 <h3 className='text-white text-center py-4'>My Todos</h3>
-
-                <div id="addTodoComponent" className='container'>
-                    <input type="text" name="addTodo" id="addTodo" placeholder='Add Todo' />
-                    <i class="fa-solid fa-plus"></i>
-                </div>
+                <AddComponent /> {/* 'addComponent.jsx' file ko components lai import gareko*/}
 
                 <div id="todos" className='container my-4'>
-                    <div className="alert completed my-3" role="alert">
-                        A simple primary alert—check it out!
-                    </div>
-                    
-                    <div className="alert pending my-3" role="alert">
-                        A simple primary alert—check it out!
-                    </div>
-                    
-                    <div className="alert pending my-3" role="alert">
-                        A simple primary alert—check it out!
-                    </div>
+                    <TodoItem />
+                    <TodoItem />
+                    <TodoItem />
+                    <TodoItem />
+                    <TodoItem />
                 </div>
             </div>
         </div>
