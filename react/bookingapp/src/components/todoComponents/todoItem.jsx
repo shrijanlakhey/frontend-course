@@ -1,9 +1,9 @@
 import React from 'react'
 
-const TodoItem = () => {
+const TodoItem = ({todo}) => {
   return (
-    <div className="alert completed my-3" role="alert">
-        A simple primary alert—check it out!
+    <div className={todo.status == "pending" ? "alert pending my-3": "alert completed my-3" } role="alert">
+        {todo.task}
     </div>
   )
 }

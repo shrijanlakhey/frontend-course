@@ -27,7 +27,7 @@ const Todo = () => {
         {
             "id": v4(),
             "task": "Read Manga",
-            "status": "pending",
+            "status": "completed",
         },
     ])
     return(
@@ -37,11 +37,12 @@ const Todo = () => {
                 <AddComponent /> {/* 'addComponent.jsx' file ko components lai import gareko*/}
 
                 <div id="todos" className='container my-4'>
-                    <TodoItem />
-                    <TodoItem />
-                    <TodoItem />
-                    <TodoItem />
-                    <TodoItem />
+                    {/* curly braces bhitra chai html bhitra js code lekhna milxa */}
+                    {
+                        todos.map((i) => {
+                            return <TodoItem todo={i}/>
+                        })
+                    } 
                 </div>
             </div>
         </div>
