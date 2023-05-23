@@ -1,8 +1,11 @@
 import React from 'react'
+import NavbarComponent from '../components/bookingComponents/NavbarComponent'
 
 const Booking = () => {
   return (
-    <div>booking</div>
+    <>
+        <NavbarComponent />
+    </>
   )
 }
 
