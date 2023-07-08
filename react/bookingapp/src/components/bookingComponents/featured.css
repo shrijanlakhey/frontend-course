@@ -1,0 +1,54 @@
+#featured-section h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;    
+    line-height: 45px;
+    width: max-content;
+}
+
+#featured-section h3::after{
+    content: "";
+    display: block;
+    width: 52%;
+    height: 0.35rem;
+    background-color: #B20B00;
+}
+
+.details-container h4{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: black;
+    margin-bottom: 0;
+}
+
+.details-container p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #0058A9;
+}
+
+.btn-container button{
+    background: #C24813;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.4rem 0;
+    width:60%;
+}
+
+.house-card{
+    width: 20%;
+    
+}
+
+.house-card img{
+    border-radius: 20px;
+}
